@@ -4,21 +4,19 @@ import React, { useEffect } from 'react'
 import { Pacifico, Nunito } from "next/font/google";
 import { useParams } from 'next/navigation';
 import axios from 'axios';
-import { useRouter } from 'next/navigation';
 
 const nunito = Nunito({ subsets: ['latin'], weight: ["variable"] })
 const PaymentProgressPage = () => {
 	const { merchant } = useParams();
-	const router = useRouter()
 
 	useEffect(() => {
 	  if(merchant){
 		axios(`${process.env.NEXT_PUBLIC_BASE_URL}/${merchant}`)
 		.then((res) => {
-			router.push("https://ladusamrat-store.vercel.app?clear=yes")
+			window.location.href = "https://ladusamrat-store.vercel.app?clear=yes"
 		})
 		.catch((err) => {
-			// alert(err.message)
+			alert(err.message)
 		})
 	  }
 	}, [merchant])

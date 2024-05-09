@@ -1,25 +1,18 @@
 "use client"
 
 import Navbar from "@/Components/ReusableComponet/Navbar";
+import ProductFilter from "@/Components/ProductPageComponent/ProductFilter";
 import ProductListSection from "@/Components/ProductPageComponent/ProductLisSection";
 import Footer from "@/Components/ReusableComponet/Footer";
+import { useProductContext } from "@/Context/ProductContext";
 import { useParams } from "next/navigation";
-import axios from "axios";
-import { useEffect, useState } from "react";
 
-const CategoryProduct = async () => {
+
+const CategoryProduct = () => {
     const { category } = useParams();
-    const [productData, setProductData] = useState([])
-
-    useEffect(() => {
-
-        axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/product/`)
-            .then((res) => {
-                setProductData(res.data.product)
-            }).catch((error) => {
-                // console.log("Error===> ", error)
-            })
-    }, [])
+    const { productData } = useProductContext()
+    console.log(category);
+    console.log(productData);
     return (
         <>
             <Navbar />
