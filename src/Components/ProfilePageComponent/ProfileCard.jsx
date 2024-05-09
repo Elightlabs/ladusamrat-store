@@ -1,7 +1,6 @@
 "use client"
 import { useState } from "react";
-import { Pacifico, Nunito } from "next/font/google";
-const pacifico = Pacifico({ subsets: ['latin'], weight: ["400"] })
+import {  Nunito } from "next/font/google";
 const nunito = Nunito({ subsets: ['latin'], weight: ["400"] })
 
 import UserCardModal from "../Modals/UserCardModal";

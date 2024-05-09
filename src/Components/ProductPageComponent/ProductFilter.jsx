@@ -1,11 +1,9 @@
 "use client"
-import { Pacifico, Nunito } from "next/font/google";
-const pacifico = Pacifico({ subsets: ['latin'], weight: ["400"] })
 const ProductFilter = () => {
     return (
         <>
             <div className="px-[5%] lg:pt-[10%] pt-[40%]  flex flex-col justify-center items-center w-full">
-                <h2 className={pacifico.className + " lg:mb-6 mb-4 text-3xl text-center lg:text-5xl text-[#C21C20]"}>
+                <h2 className={" lg:mb-6 mb-4 text-3xl text-center lg:text-5xl text-[#C21C20]"}>
                    Sweet and More
                 </h2>
 
