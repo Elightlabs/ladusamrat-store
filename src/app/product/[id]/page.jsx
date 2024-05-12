@@ -14,7 +14,7 @@ const SingleProduct = () => {
     const { productData } = useProductContext()
     const [productDetails, setProductDetails] = useState();
     useEffect(() => {
-        axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/product/${id}`)
+        axios.get(`https://ladusamrat-api.vercel.app/product/${id}`)
             .then((res) => {
                 setProductDetails(res.data.product)
             }).catch((err) => {

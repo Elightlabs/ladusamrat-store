@@ -82,7 +82,7 @@ const CartCalculation = () => {
             billing_last_name: ""
         }
         if (paymentMethod === "cod") {
-            axios(`${process.env.NEXT_PUBLIC_BASE_URL}/order/cod-order`, {
+            axios(`https://ladusamrat-api.vercel.app/order/cod-order`, {
                 method: "POST",
                 data: orderData,
                 headers: {
@@ -102,7 +102,7 @@ const CartCalculation = () => {
                     console.log(err)
                 })
         } else {
-            axios(`${process.env.NEXT_PUBLIC_BASE_URL}/order/prepaid-order`, {
+            axios(`https://ladusamrat-api.vercel.app/order/prepaid-order`, {
                 method: "POST",
                 data: orderData,
                 headers: {

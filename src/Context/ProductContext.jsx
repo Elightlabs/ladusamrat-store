@@ -10,7 +10,7 @@ const ProductProvider = ({ children }) => {
 
     useEffect(() => {
 
-        axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/product/`)
+        axios.get(`https://ladusamrat-api.vercel.app/product/`)
             .then((res) => {
                 setProductData(res.data.product)
             }).catch((error) => {

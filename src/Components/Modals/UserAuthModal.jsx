@@ -18,7 +18,7 @@ const UserAuthModal = ({ showAuthModal, setShowAuthModal }) => {
         if (showAuthModal.login) {
             let formData = new FormData(e.currentTarget);
             const userData = Object.fromEntries(formData);
-            axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/customer/signin`, userData)
+            axios.post(`https://ladusamrat-api.vercel.app/customer/signin`, userData)
                 .then(async (res) => {
                     localStorage.setItem("authToken", res.data.response);
                     setCustomerToken(res.data.response)
@@ -32,7 +32,7 @@ const UserAuthModal = ({ showAuthModal, setShowAuthModal }) => {
         } else {
             let formData = new FormData(e.target);
             const userData = Object.fromEntries(formData);
-            axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/customer/signup`, userData)
+            axios.post(`https://ladusamrat-api.vercel.app/customer/signup`, userData)
                 .then((res) => {
                     toast(res.data.message)
                     setShowAuthModal({ show: true, login: true })

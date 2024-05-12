@@ -6,7 +6,7 @@ export const CategoryContext = createContext();
 const CategoryProvider = ({ children }) => {
     const [categories, setCategories] = useState();
     useEffect(() => {
-        axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/category/get`)
+        axios.get(`https://ladusamrat-api.vercel.app/category/get`)
             .then((res) => {
                 setCategories(res.data.category)
             }).catch((error) => {

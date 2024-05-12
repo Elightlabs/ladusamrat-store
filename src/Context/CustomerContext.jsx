@@ -16,7 +16,7 @@ const CustomerProvider = ({ children }) => {
             const headers = {
                 'authorization': `Bearer ${localStorage.getItem('authToken')}`
             }
-            axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/customer/get-profile`, { headers: headers })
+            axios.get(`https://ladusamrat-api.vercel.app/customer/get-profile`, { headers: headers })
                 .then((res) => {
                     setCustomerData(res.data.customer)
                     console.log(res.data.customer)

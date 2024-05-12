@@ -10,7 +10,7 @@ const UserCardModal = ({ showModal, setShowModal }) => {
         }
         let formData = new FormData(e.currentTarget);
         const userData = Object.fromEntries(formData);
-        axios.patch(`${process.env.NEXT_PUBLIC_BASE_URL}/customer/update`, userData, { headers: headers })
+        axios.patch(`https://ladusamrat-api.vercel.app/customer/update`, userData, { headers: headers })
             .then(async (res) => {
                 localStorage.setItem("authToken", res.data.response);
                 setCustomerToken(res.data.response)

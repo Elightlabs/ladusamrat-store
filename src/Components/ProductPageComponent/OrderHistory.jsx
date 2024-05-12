@@ -9,7 +9,7 @@ import axios from "axios";
 const OrderHistory = () => {
     const [orders, setOrders] = useState([])
     useEffect(() => {
-        axios(`${process.env.NEXT_PUBLIC_BASE_URL}/order/customer`, {
+        axios(`https://ladusamrat-api.vercel.app/order/customer`, {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("authToken")}`

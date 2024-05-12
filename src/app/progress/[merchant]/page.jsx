@@ -11,7 +11,7 @@ const PaymentProgressPage = () => {
 
 	useEffect(() => {
 	  if(merchant){
-		axios(`${process.env.NEXT_PUBLIC_BASE_URL}/${merchant}`)
+		axios(`https://ladusamrat-api.vercel.app/${merchant}`)
 		.then((res) => {
 			window.location.href = "https://ladusamrat-store.vercel.app?clear=yes"
 		})
