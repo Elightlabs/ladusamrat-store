@@ -9,7 +9,10 @@ const Footer = () => {
             <footer class="bg-white px-[5%] py-[2%]">
                 <div className="grid lg:grid-cols-11 grid-cols-1 ">
                     <div className="grid col-span-3 gap-6 lg:gap-4">
-                        <img src="/Assets/logo.png" />
+                        <div className="">
+                            <img src="/Assets/logo.png" />
+                            <h1>Mumbai Ladusamrat</h1>
+                        </div>
                         <a className={nunito.className + " flex  font-semibold text-sm lg:text-base"}>
                             <svg xmlns="http://www.w3.org/2000/svg" className="mr-2" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg> contact@ladusamrat.com
                         </a>
@@ -61,17 +64,16 @@ const Footer = () => {
                             <h2 className={nunito.className + " font-extrabold text-[#C21C20] text-sm lg:text-base"}>Ladu Samrat, Kandivali</h2>
                             <p className={nunito.className + " font-semibold "}>3 rd floor growels, Akurli Rd, Akurli Industry Estate, Kandivali East, Mumbai, Maharashtra 400101</p>
                         </div>
-                        <div>
-                            <h2 className={nunito.className + " font-extrabold text-[#C21C20] text-sm lg:text-base"}>Ladu Samrat, Thane</h2>
-                            <p className={nunito.className + " font-semibold "}>Chendani Bunder Road, Mahagiri Koliwada, Juhu Chandan Society, Jambli Naka, Thane West, Thane, Maharashtra 400601</p>
-                        </div>
                     </div>
                 </div>
                 <div className="h-[3px] my-6 lg:my-12 w-full bg-gradient-to-r from-transparent via-[#C21C20] to-transparent">
                 </div>
                 <div className="w-full text-center">
                     <p>
-                        © Ladu Samrat, 2021 ElightLabs Technologies
+                        ©Mumbai LaduSamrat, {(function () {
+                            let newDate = new Date()
+                            return newDate.getFullYear()
+                        })()} ElightLabs Technologies
                     </p>
                 </div>
             </footer>

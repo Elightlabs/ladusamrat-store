@@ -30,6 +30,10 @@ const returnRefundPolicy = () => {
                     <p className="text-sm">Products purchased from physical stores are non-returnable.</p>
                     <p className="text-sm">Refunds are not applicable if the return is initiated after 7 days from purchase.</p>
                 </div>
+                <div className="py-4 ">
+                    <h2 className="text-xl font-bold">Note:</h2>
+                    <p className="text-sm">In 5-7 working days the amount will be credited to original payment mode.</p>
+                </div>
             </div>
             <Footer />
 
