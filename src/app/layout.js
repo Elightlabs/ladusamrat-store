@@ -6,7 +6,7 @@ import { CustomerProvider } from '@/Context/CustomerContext'
 import { ProductProvider } from '@/Context/ProductContext'
 import { CartProvider } from "react-use-cart";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] , fallback: ["Arial", "Times New Roman"],})
 
 // export const metadata = {
 //   title: 'Ladu Smarat',

@@ -1,6 +1,6 @@
 "use client"
 import { Pacifico, Nunito } from "next/font/google";
-const pacifico = Pacifico({ subsets: ['latin'], weight: ["400"] })
+const pacifico = Pacifico({ subsets: ['latin'], weight: ["400"] , fallback: ["Arial", "Times New Roman"],})
 import Navbar from "@/Components/ReusableComponet/Navbar"
 import ProductListTabel from "@/Components/CartPageComponent/CartProducts"
 import Footer from "@/Components/ReusableComponet/Footer"

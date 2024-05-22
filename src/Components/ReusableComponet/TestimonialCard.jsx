@@ -1,6 +1,6 @@
 "use client"
 import { Nunito } from "next/font/google";
-const nunito = Nunito({ subsets: ['latin'], weight: ["400"] })
+const nunito = Nunito({ subsets: ['latin'], weight: ["400"] , fallback: ["Arial", "Times New Roman"],})
 
 const TestimonialCard = () => {
     return (

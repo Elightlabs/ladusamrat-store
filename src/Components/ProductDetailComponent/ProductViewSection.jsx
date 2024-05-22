@@ -1,7 +1,7 @@
 "use client"
 import { Pacifico, Nunito } from "next/font/google";
 import { useCallback, useEffect, useMemo, useState } from "react";
-const nunito = Nunito({ subsets: ['latin'], weight: "variable" })
+const nunito = Nunito({ subsets: ['latin'], weight: "variable" , fallback: ["Arial", "Times New Roman"],})
 import { useCart } from "react-use-cart";
 import { ShoppingBag } from "lucide-react"
 import Link from "next/link";

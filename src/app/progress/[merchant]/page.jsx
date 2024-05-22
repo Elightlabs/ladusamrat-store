@@ -5,7 +5,7 @@ import { Pacifico, Nunito } from "next/font/google";
 import { useParams } from 'next/navigation';
 import axios from 'axios';
 
-const nunito = Nunito({ subsets: ['latin'], weight: ["variable"] })
+const nunito = Nunito({ subsets: ['latin'], weight: ["variable"] , fallback: ["Arial", "Times New Roman"],})
 const PaymentProgressPage = () => {
 	const { merchant } = useParams();
 

@@ -1,7 +1,7 @@
 "use client"
 import { Pacifico, Nunito } from "next/font/google";
 
-const nunito = Nunito({ subsets: ['latin'], weight: ["variable"] })
+const nunito = Nunito({ subsets: ['latin'], weight: ["variable"] , fallback: ["Arial", "Times New Roman"],})
 
 const Footer = () => {
     return (

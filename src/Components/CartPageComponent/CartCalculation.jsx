@@ -1,6 +1,6 @@
 "use client"
 import { Pacifico, Nunito } from "next/font/google";
-const nunito = Nunito({ subsets: ['latin'], weight: ["variable"] })
+const nunito = Nunito({ subsets: ['latin'], weight: ["variable"], fallback: ["Arial", "Times New Roman"],})
 import ProductListTabel from "./CartProducts"
 import { useCart } from "react-use-cart";
 import { v4 as uuidv4 } from 'uuid';

@@ -8,8 +8,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Pagination,Autoplay } from 'swiper/modules';
 
-const pacifico = Pacifico({ subsets: ['latin'], weight: ["400"] })
-const nunito = Nunito({ subsets: ['latin'], weight: ["variable"] })
+const pacifico = Pacifico({ subsets: ['latin'], weight: ["400"], fallback: ["Arial", "Times New Roman"],})
+const nunito = Nunito({ subsets: ['latin'], weight: ["variable"] , fallback: ["Arial", "Times New Roman"],})
 
 const HeroSection = () => {
     return (

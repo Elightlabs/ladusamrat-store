@@ -1,6 +1,6 @@
 import { Pacifico, Nunito } from "next/font/google";
 import TestimonialCard from "../ReusableComponet/TestimonialCard"
-const pacifico = Pacifico({ subsets: ['latin'], weight: ["400"] })
+const pacifico = Pacifico({ subsets: ['latin'], weight: ["400"] , fallback: ["Arial", "Times New Roman"],})
 
 const TestimonialSection = () => {
     return (

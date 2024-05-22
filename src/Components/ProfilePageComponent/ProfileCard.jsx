@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import {  Nunito } from "next/font/google";
-const nunito = Nunito({ subsets: ['latin'], weight: ["400"] })
+const nunito = Nunito({ subsets: ['latin'], weight: ["400"] , fallback: ["Arial", "Times New Roman"],})
 
 import UserCardModal from "../Modals/UserCardModal";
 

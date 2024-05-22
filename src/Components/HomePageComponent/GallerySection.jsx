@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { Pacifico, Nunito } from "next/font/google";
-const pacifico = Pacifico({ subsets: ['latin'], weight: ["400"] })
+const pacifico = Pacifico({ subsets: ['latin'], weight: ["400"] , fallback: ["Arial", "Times New Roman"],})
 const GalllerySection = () => {
     return (
         <>

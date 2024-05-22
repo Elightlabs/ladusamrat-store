@@ -1,7 +1,7 @@
 "use client"
 import { Nunito } from "next/font/google"
 import Link from "next/link";
-const nunito = Nunito({ subsets: ['latin'], weight: ["variable"] })
+const nunito = Nunito({ subsets: ['latin'], weight: ["variable"], fallback: ["Arial", "Times New Roman"],})
 import { useRouter } from 'next/navigation'
 import { useCart } from "react-use-cart";
 const Productcard = ({ product }) => {

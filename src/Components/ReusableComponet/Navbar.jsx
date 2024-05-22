@@ -1,6 +1,6 @@
 "use client"
 import { Pacifico, Nunito } from "next/font/google";
-const nunito = Nunito({ subsets: ['latin'], weight: ["variable"] })
+const nunito = Nunito({ subsets: ['latin'], weight: ["variable"], fallback: ["Arial", "Times New Roman"],})
 import Image from "next/image"
 import { useState } from "react"
 
