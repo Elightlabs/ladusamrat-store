@@ -6,8 +6,6 @@ import { useState } from "react"
 
 import { useCatgoryContext } from "@/Context/CategoryContext";
 import { useCustomerContext } from "@/Context/CustomerContext";
-
-
 import UserAuthModal from "../Modals/UserAuthModal";
 import Link from "next/link";
 
