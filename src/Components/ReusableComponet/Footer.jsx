@@ -70,7 +70,7 @@ const Footer = () => {
                 </div>
                 <div className="w-full text-center">
                     <p>
-                        ©Mumbai LaduSamrat, {(function () {
+                        ©Mumbai ladooSamrat, {(function () {
                             let newDate = new Date()
                             return newDate.getFullYear()
                         })()} ElightLabs Technologies
