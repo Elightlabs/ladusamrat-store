@@ -9,8 +9,18 @@ export const CustomerContext = createContext();
 const CustomerProvider = ({ children }) => {
     const [customerData, setCustomerData] = useState()
     const [customerToken, setCustomerToken] = useState()
-    
+    const [banners, setBanners] = useState([])
+
     useEffect(() => {
+        axios.get("https://ladusamrat-api.vercel.app/banner/", {
+            method: "GET"
+        })
+            .then((res) => {
+                setBanners(res.data.banners)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
         if (localStorage.getItem('authToken')) {
             setCustomerToken(localStorage.getItem('authToken'))
             const headers = {
@@ -28,7 +38,7 @@ const CustomerProvider = ({ children }) => {
         }
     }, [])
 
-    return <CustomerContext.Provider value={{ customerData, setCustomerData, setCustomerToken, customerToken }}>{children}</CustomerContext.Provider>
+    return <CustomerContext.Provider value={{ customerData, setCustomerData, setCustomerToken, customerToken, banners }}>{children}</CustomerContext.Provider>
 
 }
 

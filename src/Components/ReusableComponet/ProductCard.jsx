@@ -10,7 +10,7 @@ const Productcard = ({ product }) => {
     return (
         <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md">
             <Link href={`/product/${product._id}`}>
-                <img class="p-8 rounded-t-lg h-64" src={product.image} alt="product image" />
+                <img class="p-8 rounded-t-lg h-64 w-full object-cover" src={product.image} alt="product image" />
             </Link>
             <div class="px-8 pb-5">
                 <Link href={`/product/${product._id}`}>
